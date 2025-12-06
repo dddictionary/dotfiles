@@ -1,0 +1,29 @@
+diff --git a/rose-pine.tmux b/rose-pine.tmux
+index bf2ed56..2d0494c 100755
+--- a/rose-pine.tmux
++++ b/rose-pine.tmux
+@@ -103,6 +103,24 @@ main() {
+         thm_hl_med="#44415a";
+         thm_hl_high="#56526e";
+ 
++    elif [[ $theme == kanagawa ]]; then
++
++        thm_base="#1F1F28";
++        thm_surface="#2A2A37";
++        thm_overlay="#223249";
++        thm_muted="#727169";
++        thm_subtle="#C8C093";
++        thm_text="#DCD7BA";
++        thm_love="#E82424";
++        thm_gold="#DCA561";
++        thm_rose="#938AA9";
++        thm_pine="#7FB4CA";
++        thm_foam="#6A9589";
++        thm_iris="#957FB8";
++        thm_hl_low="#181820";
++        thm_hl_med="#363646";
++        thm_hl_high="#54546D";
++
+     fi
+ 
+     # Aggregating all commands into a single array
