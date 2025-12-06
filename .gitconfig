@@ -1,0 +1,23 @@
+[user]
+    name = Abrar Habib
+    email = abrar.habib@shopify.com
+[core]
+    editor = nvim
+[include]
+    path = /Users/abrarhabib/.config/dev/gitconfig
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    lg = log --oneline --graph --all --decorate
+    amend = commit --amend --no-edit
+    unstage = reset HEAD --
+    name-diff = diff --name-only main
+    ; last = log -1 HEAD
+    ; type = cat-file -t
+    ; dump = cat-file -p
+
+[maintenance]
+	repo = /Users/abrarhabib/world/trees/mozart-template-gen-cv2/src
+	repo = /Users/abrarhabib/world/trees/mozart-send-time-optimization/src

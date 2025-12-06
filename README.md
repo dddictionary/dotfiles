@@ -13,6 +13,7 @@ Personal tmux configuration with Rose Pine theme.
    ```bash
    ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
    ln -sf ~/dotfiles/.tmux ~/.tmux
+   ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
    ```
 
 3. Install TPM (Tmux Plugin Manager):
@@ -23,11 +24,3 @@ Personal tmux configuration with Rose Pine theme.
 4. Install plugins:
    - Start tmux
    - Press `Prefix + I` (Ctrl+a then Shift+i) to install plugins
-
-## Features
-
-- Custom prefix: `Ctrl+a`
-- Rose Pine Moon theme
-- Vim-style copy mode
-- Mouse support enabled
-- Custom pane splitting with `|` and `-`
