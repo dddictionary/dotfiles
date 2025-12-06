@@ -11,15 +11,35 @@ if [ ! -d ~/.tmux/plugins/tmux ]; then
     exit 1
 fi
 
+echo "Applying Kanagawa theme patch to Rose Pine plugin..."
 if [ -f ~/dotfiles/rose-pine-kanagawa.patch ]; then
-    echo "Applying Kanagawa theme patch..."
     if patch -p1 -d ~/.tmux/plugins/tmux < ~/dotfiles/rose-pine-kanagawa.patch; then
-        echo "✓ Kanagawa theme patch applied successfully!"
-        echo "Reload tmux config with: Prefix + r"
+        echo "✓ Rose Pine plugin patched successfully!"
     else
-        echo "✗ Patch failed (may already be applied)"
+        echo "✗ Plugin patch failed (may already be applied)"
     fi
 else
     echo "Error: rose-pine-kanagawa.patch not found"
     exit 1
+fi
+
+echo "Applying Kanagawa variant to .tmux.conf..."
+if [ -f ~/dotfiles/tmux-conf-kanagawa.patch ]; then
+    if patch -p0 -d ~ < ~/dotfiles/tmux-conf-kanagawa.patch; then
+        echo "✓ .tmux.conf updated successfully!"
+    else
+        echo "✗ .tmux.conf patch failed (may already be applied)"
+    fi
+else
+    echo "Error: tmux-conf-kanagawa.patch not found"
+    exit 1
+fi
+
+# Reload tmux config if tmux is running
+if tmux info &> /dev/null; then
+    echo "Reloading tmux configuration..."
+    tmux source-file ~/.tmux.conf
+    echo "✓ Done! Kanagawa theme is now active."
+else
+    echo "✓ Done! Start tmux to see the Kanagawa theme."
 fi
