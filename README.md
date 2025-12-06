@@ -11,6 +11,11 @@ git clone https://github.com/dddictionary/dotfiles ~/dotfiles
 ~/dotfiles/install.sh
 ```
 
+If the Kanagawa patch fails during install, apply it manually after starting tmux:
+```bash
+~/dotfiles/apply-patch.sh
+```
+
 ### Manual Install
 
 1. Clone this repository:
