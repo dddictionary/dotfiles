@@ -6,13 +6,13 @@ Personal tmux configuration with Rose Pine theme.
 
 1. Clone this repository:
    ```bash
-   git clone <your-repo-url> ~/tmux-config
+   git clone <your-repo-url> ~/dotfiles
    ```
 
 2. Create symbolic links:
    ```bash
-   ln -sf ~/tmux-config/.tmux.conf ~/.tmux.conf
-   ln -sf ~/tmux-config/.tmux ~/.tmux
+   ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
+   ln -sf ~/dotfiles/.tmux ~/.tmux
    ```
 
 3. Install TPM (Tmux Plugin Manager):
